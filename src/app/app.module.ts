@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewContactsComponent } from './view-contacts/view-contacts.component';
-
+import { HttpClientModule } from "@angular/common/http";
 const appRoutes:Routes=[
   {
     path:"",component:ViewContactsComponent
@@ -19,7 +19,8 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
